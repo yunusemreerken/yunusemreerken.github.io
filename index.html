@@ -634,7 +634,6 @@
     footer { flex-direction: column; gap: 1.5rem; text-align: center; }
   }
 </style>
-</head>
 <body class="lang-en">
 
 <div class="glow"></div>
@@ -657,17 +656,17 @@
     <section class="hero">
       <div class="hero-text">
         <div class="hero-eyebrow">
-          <span data-lang="en" class="inline-lang">IT Support &amp; DevOps Path</span>
-          <span data-lang="tr" class="inline-lang">IT Destek &amp; DevOps Yolu</span>
+          <span data-lang="en" class="inline-lang">DevOps &amp; MLOps Engineer</span>
+          <span data-lang="tr" class="inline-lang">DevOps &amp; MLOps Mühendisi</span>
         </div>
 
         <h1>Yunus<br>Emre <em>Erken</em></h1>
 
         <p class="hero-desc" data-lang="en">
-          IT Support professional with Tier 1/2 help desk experience, systems administration, and a builder's mindset. Actively expanding into DevOps and automation.
+          I deploy ML models to production. Docker, Terraform, CI/CD, cloud infrastructure — closing the gap between a working notebook and a running system.
         </p>
         <p class="hero-desc" data-lang="tr">
-          Tier 1/2 help desk deneyimine sahip IT Destek uzmanı. Sistem yönetimi, otomasyon ve DevOps alanında kendini sürekli geliştiriyor.
+          ML modellerini production'a taşıyorum. Docker, Terraform, CI/CD ve cloud altyapısı — çalışan bir notebook ile ayakta duran bir sistem arasındaki boşluğu kapatıyorum.
         </p>
 
         <div class="hero-ctas">
@@ -682,23 +681,19 @@
             <div class="dot dot-r"></div>
             <div class="dot dot-y"></div>
             <div class="dot dot-g"></div>
-            <span class="terminal-title">~/yunus — zsh</span>
+            <span class="terminal-title">deploy.sh — oracle-cloud</span>
           </div>
           <div class="terminal-body">
-            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">whoami</span></div>
-            <div class="t-out"><span class="t-str">yunus-emre-erken</span></div>
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">docker build -t yolov8-app .</span></div>
+            <div class="t-out">✓ image built (swap: 2GB, RAM: 1GB)</div>
             <br>
-            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">cat profile.json</span></div>
-            <div class="t-out">{</div>
-            <div class="t-out">&nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"IT Support Specialist"</span>,</div>
-            <div class="t-out">&nbsp;&nbsp;<span class="t-key">"tier"</span>: <span class="t-val">2</span>,</div>
-            <div class="t-out">&nbsp;&nbsp;<span class="t-key">"os"</span>: [<span class="t-str">"Windows"</span>, <span class="t-str">"Linux"</span>],</div>
-            <div class="t-out">&nbsp;&nbsp;<span class="t-key">"path"</span>: <span class="t-str">"DevOps"</span>,</div>
-            <div class="t-out">&nbsp;&nbsp;<span class="t-key">"cert"</span>: <span class="t-str">"CompTIA A+ (WIP)"</span></div>
-            <div class="t-out">}</div>
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">terraform apply</span></div>
+            <div class="t-out">&nbsp;&nbsp;<span class="t-key">aws_s3_bucket</span>: <span class="t-str">created</span></div>
+            <div class="t-out">&nbsp;&nbsp;<span class="t-key">aws_iam_role</span>: <span class="t-str">least-privilege</span></div>
+            <div class="t-out"><span class="t-str">Apply complete. 3 added.</span></div>
             <br>
-            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">uptime</span></div>
-            <div class="t-out">3+ years supporting users <span class="cursor"></span></div>
+            <div class="t-line"><span class="t-prompt">❯</span><span class="t-cmd">curl /health</span></div>
+            <div class="t-out"><span class="t-str">{"status":"ok","model":"yolov8n"}</span> <span class="cursor"></span></div>
           </div>
         </div>
       </div>
@@ -715,59 +710,54 @@
 
       <div class="skills-grid">
         <div class="skill-cell">
-          <div class="skill-category">Help Desk</div>
+          <div class="skill-category">Containers &amp; IaC</div>
           <div class="skill-tags">
-            <span class="tag">Tier 1/2 Support</span>
-            <span class="tag">Ticket Management</span>
-            <span class="tag">Remote Support</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">LocalStack</span>
+          </div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-category">Cloud</div>
+          <div class="skill-tags">
+            <span class="tag">Oracle Cloud</span>
+            <span class="tag">AWS S3/IAM</span>
+            <span class="tag">Cost Optimization</span>
+          </div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-category">CI/CD</div>
+          <div class="skill-tags">
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Git</span>
+            <span class="tag">Pipeline Design</span>
+          </div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-category">ML / AI Systems</div>
+          <div class="skill-tags">
+            <span class="tag">YOLOv8</span>
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Streamlit</span>
           </div>
         </div>
         <div class="skill-cell">
           <div class="skill-category">Systems</div>
           <div class="skill-tags">
-            <span class="tag">Windows 10/11</span>
+            <span class="tag">Linux (Ubuntu)</span>
             <span class="tag">Windows Server</span>
             <span class="tag">Active Directory</span>
-            <span class="tag">Linux</span>
+            <span class="tag">GRUB / Kernel</span>
           </div>
         </div>
         <div class="skill-cell">
-          <div class="skill-category">Networking</div>
+          <div class="skill-category">Automation</div>
           <div class="skill-tags">
-            <span class="tag">TCP/IP</span>
-            <span class="tag">DNS</span>
-            <span class="tag">DHCP</span>
+            <span class="tag">PowerShell</span>
+            <span class="tag">Bash</span>
             <span class="tag">GPO</span>
-          </div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-category">Tools</div>
-          <div class="skill-tags">
-            <span class="tag">Jira</span>
-            <span class="tag">PowerShell</span>
-            <span class="tag">VMware</span>
-            <span class="tag">VirtualBox</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Git</span>
-          </div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-category">Hardware</div>
-          <div class="skill-tags">
-            <span class="tag">RJ45 Crimping</span>
-            <span class="tag">Patch Panel</span>
-            <span class="tag">Bare-metal Builds</span>
-            <span class="tag">Liquid Recovery</span>
-          </div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-category">Dev</div>
-          <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">PowerShell</span>
-            <span class="tag">SQL</span>
             <span class="tag">REST API</span>
-            <span class="tag">PHP/Laravel</span>
           </div>
         </div>
       </div>
@@ -787,22 +777,20 @@
         <div class="exp-item">
           <div class="exp-period">2022 – 2025</div>
           <div>
-            <div class="exp-role" data-lang="en">IT Support / IT Teacher</div>
-            <div class="exp-role" data-lang="tr">IT Öğretmeni / IT Destek</div>
-            <div class="exp-company">Ministry of Education — Batman, Turkey</div>
+            <div class="exp-role" data-lang="en">IT Systems &amp; Infrastructure Specialist</div>
+            <div class="exp-role" data-lang="tr">IT Sistemleri &amp; Altyapı Uzmanı</div>
+            <div class="exp-company">Ministry of Education — Turkey</div>
             <ul class="exp-bullets" data-lang="en">
-              <li>Diagnosed and resolved hardware/software issues remotely and on-site including OS errors and application crashes</li>
-              <li>Installed and maintained Windows 10/11 workstations, peripherals, and third-party software</li>
-              <li>Managed support tickets via Jira with accurate documentation and recurring issue tracking</li>
-              <li>Educated users on cybersecurity best practices, reducing repeat support requests</li>
-              <li>Coordinated equipment replacements and repairs with vendors and stakeholders</li>
+              <li>Maintained and configured Windows Server instances across a multi-site environment; managed AD, DNS, DHCP, and GPO for hundreds of users</li>
+              <li>Automated user provisioning and group management via PowerShell scripts, reducing manual IT overhead</li>
+              <li>Tracked incidents in Jira; identified recurring failure patterns and reduced repeat tickets over time</li>
+              <li>Delivered cybersecurity awareness training that measurably reduced security-related incidents</li>
             </ul>
             <ul class="exp-bullets" data-lang="tr">
-              <li>Uzaktan ve yerinde donanım/yazılım sorunlarını teşhis etti ve çözdü</li>
-              <li>Windows 10/11 iş istasyonlarını, çevre birimlerini ve uygulamaları kurdu ve yönetti</li>
-              <li>Jira ile destek taleplerini belgeledi, tekrar eden sorunları takip etti</li>
-              <li>Kullanıcılara siber güvenlik farkındalığı eğitimi vererek tekrar eden istekleri azalttı</li>
-              <li>Tedarikçilerle ekipman değişimi ve onarım süreçlerini koordine etti</li>
+              <li>Çok lokasyonlu ortamda Windows Server yapılandırması; yüzlerce kullanıcı için AD, DNS, DHCP ve GPO yönetimi</li>
+              <li>PowerShell scriptleri ile kullanıcı provisioning ve grup yönetimini otomatikleştirdi</li>
+              <li>Jira ile olay takibi; tekrarlayan hata örüntülerini tespit ederek tekrar eden ticket'ları azalttı</li>
+              <li>Siber güvenlik farkındalık eğitimleri ile güvenlik olaylarını ölçülebilir şekilde düşürdü</li>
             </ul>
           </div>
         </div>
@@ -812,16 +800,16 @@
           <div>
             <div class="exp-role" data-lang="en">Software Developer</div>
             <div class="exp-role" data-lang="tr">Yazılım Geliştirici</div>
-            <div class="exp-company">Joint Business Intelligence — Denizli, Turkey</div>
+            <div class="exp-company">Corporation — Turkey</div>
             <ul class="exp-bullets" data-lang="en">
-              <li>Built and maintained admin panels using ASP.NET Core 6 MVC and SQL Server</li>
-              <li>Integrated REST APIs and file management tools; wrote complex SQL queries and generated operational reports</li>
-              <li>Collaborated cross-functionally with IT and business teams using modular design principles</li>
+              <li>Built and maintained admin panel and internal tooling using ASP.NET Core 6 MVC and SQL Server</li>
+              <li>Designed and integrated REST APIs; wrote complex SQL queries and automated report generation</li>
+              <li>Applied modular design patterns for long-term maintainability across cross-functional teams</li>
             </ul>
             <ul class="exp-bullets" data-lang="tr">
-              <li>ASP.NET Core 6 MVC ve SQL Server ile yönetim panelleri geliştirdi ve bakımını üstlendi</li>
-              <li>REST API entegrasyonları yaptı, karmaşık SQL sorguları yazdı, operasyonel raporlar oluşturdu</li>
-              <li>IT ve iş birimleriyle modüler tasarım anlayışıyla ekip çalışması yürüttü</li>
+              <li>ASP.NET Core 6 MVC ve SQL Server ile admin paneli ve iç araçlar geliştirdi ve bakımını yaptı</li>
+              <li>REST API tasarımı ve entegrasyonu; karmaşık SQL sorguları ve otomatik rapor üretimi</li>
+              <li>Uzun vadeli sürdürülebilirlik için modüler tasarım desenleri uyguladı</li>
             </ul>
           </div>
         </div>
@@ -829,16 +817,14 @@
         <div class="exp-item">
           <div class="exp-period">2018</div>
           <div>
-            <div class="exp-role" data-lang="en">Computer Software Technician</div>
-            <div class="exp-role" data-lang="tr">Bilgisayar Yazılım Teknikeri</div>
-            <div class="exp-company">Çakıroğlu E-Ticaret — Denizli, Turkey</div>
+            <div class="exp-role" data-lang="en">Web &amp; Systems Developer</div>
+            <div class="exp-role" data-lang="tr">Web &amp; Sistem Geliştirici</div>
+            <div class="exp-company">Corporation — Turkey</div>
             <ul class="exp-bullets" data-lang="en">
-              <li>Developed web applications in PHP/Laravel and provided technical support for internal system operations</li>
-              <li>Performed system troubleshooting and assisted with operational IT needs</li>
+              <li>Built web applications with PHP / Laravel and provided systems support for internal operations</li>
             </ul>
             <ul class="exp-bullets" data-lang="tr">
-              <li>PHP/Laravel ile web uygulamaları geliştirdi, iç sistem operasyonlarına teknik destek sağladı</li>
-              <li>Sistem sorun giderme ve IT operasyonel destek görevlerini üstlendi</li>
+              <li>PHP / Laravel ile web uygulamaları geliştirdi ve iç operasyonlar için sistem desteği sağladı</li>
             </ul>
           </div>
         </div>
@@ -848,12 +834,12 @@
           <div>
             <div class="exp-role" data-lang="en">Software Intern</div>
             <div class="exp-role" data-lang="tr">Yazılım Stajyeri</div>
-            <div class="exp-company">Kodpit Yazılım</div>
+            <div class="exp-company">Corporation — Turkey</div>
             <ul class="exp-bullets" data-lang="en">
-              <li>Built backend for a forum/blog site using PHP &amp; MySQL; learned MVC architecture and server-side logic</li>
+              <li>Developed backend for a forum/blog platform in PHP &amp; MySQL; applied MVC architecture</li>
             </ul>
             <ul class="exp-bullets" data-lang="tr">
-              <li>PHP &amp; MySQL ile forum/blog sitesi backend'i geliştirdi; MVC mimarisini öğrendi</li>
+              <li>PHP &amp; MySQL ile forum/blog platformu backend'i geliştirdi; MVC mimarisi uyguladı</li>
             </ul>
           </div>
         </div>
@@ -863,14 +849,12 @@
           <div>
             <div class="exp-role" data-lang="en">System Administration Intern</div>
             <div class="exp-role" data-lang="tr">Sistem Yönetimi Stajyeri</div>
-            <div class="exp-company">Netinternet</div>
+            <div class="exp-company">Netinternet — Turkey</div>
             <ul class="exp-bullets" data-lang="en">
-              <li>Installed and configured Linux (Ubuntu) from scratch including kernel setup and file/directory permissions</li>
-              <li>Built foundation in server and network fundamentals</li>
+              <li>Installed and configured Ubuntu Linux from scratch; managed filesystem permissions and server fundamentals</li>
             </ul>
             <ul class="exp-bullets" data-lang="tr">
-              <li>Linux (Ubuntu) kurulumu ve yapılandırması; kernel kurulumu ve dosya/dizin izinleri yönetimi</li>
-              <li>Sunucu ve ağ temelleri konusunda sağlam altyapı edindi</li>
+              <li>Ubuntu Linux kurulumu ve yapılandırması; dosya sistemi izinleri ve sunucu temelleri yönetimi</li>
             </ul>
           </div>
         </div>
@@ -882,43 +866,44 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="fade-in">
-      <p class="section-label" data-lang="en">Home Lab &amp; Side Projects</p>
-      <p class="section-label" data-lang="tr">Home Lab &amp; Yan Projeler</p>
+      <p class="section-label" data-lang="en">Production &amp; Lab Projects</p>
+      <p class="section-label" data-lang="tr">Üretim &amp; Lab Projeleri</p>
       <h2 class="section-title" data-lang="en">Projects</h2>
       <h2 class="section-title" data-lang="tr">Projeler</h2>
 
       <div class="projects-grid">
 
         <div class="project-card">
-          <div class="project-num">01</div>
-          <div class="project-title" data-lang="en">Home IT Lab (Ongoing)</div>
-          <div class="project-title" data-lang="tr">Home IT Lab (Devam Ediyor)</div>
-          <p class="project-desc" data-lang="en">Simulated enterprise IT environment with VMware/VirtualBox. Deployed Windows Server, configured Active Directory, DNS, DHCP, and GPO. Practiced incident resolution in controlled scenarios.</p>
-          <p class="project-desc" data-lang="tr">VMware/VirtualBox ile simüle edilmiş kurumsal IT ortamı. Windows Server, Active Directory, DNS, DHCP ve GPO yapılandırmaları. Kontrollü senaryolarda olay yönetimi pratiği.</p>
+          <div class="project-num">01 — HERO PROJECT</div>
+          <div class="project-title" data-lang="en">Real-Time Object Detection — YOLOv8 + Docker + Oracle Cloud</div>
+          <div class="project-title" data-lang="tr">Gerçek Zamanlı Nesne Tespiti — YOLOv8 + Docker + Oracle Cloud</div>
+          <p class="project-desc" data-lang="en">Production ML inference on a $0/month, 1 GB RAM Oracle Cloud instance. Containerized with Docker; tuned swap to 2 GB and adjusted model parameters to fit memory. Proactively found a security vulnerability post-deploy and took the server offline immediately.</p>
+          <p class="project-desc" data-lang="tr">Aylık $0, 1 GB RAM Oracle Cloud'da production ML inference. Docker ile containerize edildi; swap 2 GB'a yükseltildi. Deploy sonrası güvenlik açığı tespit edildi, sunucu derhal çevrimdışı alındı.</p>
+          <a href="https://github.com/yunusemreerken/real-time-object-detection-yolov8" target="_blank" class="project-link">↗ View on GitHub</a>
         </div>
 
         <div class="project-card">
           <div class="project-num">02</div>
-          <div class="project-title">Real-Time Object Detection — YOLOv8</div>
-          <p class="project-desc" data-lang="en">Built a real-time object detection app using YOLOv8 and Streamlit, supporting image, video, and webcam input. Resolved Python/OpenCV dependency conflicts on Streamlit Cloud.</p>
-          <p class="project-desc" data-lang="tr">YOLOv8 ve Streamlit kullanarak gerçek zamanlı nesne tespiti uygulaması geliştirdi. Görüntü, video ve webcam desteği. Streamlit Cloud'da Python/OpenCV bağımlılık sorunlarını çözdü.</p>
-          <a href="https://github.com/yunusemreerken/real-time-object-detection-yolov8" target="_blank" class="project-link">↗ github.com/yunusemreerken</a>
+          <div class="project-title" data-lang="en">IaC — Terraform + LocalStack (AWS-Compatible)</div>
+          <div class="project-title" data-lang="tr">IaC — Terraform + LocalStack (AWS Uyumlu)</div>
+          <p class="project-desc" data-lang="en">Provisioned S3 buckets and IAM roles locally using Terraform against LocalStack. Wrote least-privilege IAM policies; structured reusable Terraform modules. Demonstrates IaC state management and cloud permission models transferable to live AWS/GCP.</p>
+          <p class="project-desc" data-lang="tr">Terraform ile LocalStack üzerinde S3 ve IAM provisioning. En az ayrıcalık ilkesiyle IAM politikaları yazıldı; yeniden kullanılabilir Terraform modülleri. Canlı AWS/GCP'ye aktarılabilir IaC prensipleri.</p>
         </div>
 
         <div class="project-card">
           <div class="project-num">03</div>
-          <div class="project-title" data-lang="en">Linux Kernel Recovery</div>
-          <div class="project-title" data-lang="tr">Linux Kernel Kurtarma</div>
-          <p class="project-desc" data-lang="en">Recovered a failed Ubuntu system after GUI crash by booting a backup kernel via GRUB. Full backup and kernel recovery using Makefile/build tools — restored corrupted modules with zero data loss.</p>
-          <p class="project-desc" data-lang="tr">GUI çökmesinden sonra GRUB ile yedek kernel boot ederek Ubuntu sistemini kurtardı. Makefile/build araçlarıyla tam yedekleme ve kernel kurtarma — sıfır veri kaybıyla bozuk modülleri geri yükledi.</p>
+          <div class="project-title" data-lang="en">Windows Server 2025 Enterprise Lab</div>
+          <div class="project-title" data-lang="tr">Windows Server 2025 Kurumsal Lab</div>
+          <p class="project-desc" data-lang="en">Full AD DS, DNS, DHCP, GPO, and OU on bare-metal ASUS hardware. PowerShell-automated user provisioning and group management — simulating real enterprise IT workflows end-to-end.</p>
+          <p class="project-desc" data-lang="tr">Bare-metal ASUS donanımında AD DS, DNS, DHCP, GPO ve OU kurulumu. PowerShell ile kullanıcı provisioning ve grup yönetimi otomasyonu.</p>
         </div>
 
         <div class="project-card">
           <div class="project-num">04</div>
-          <div class="project-title" data-lang="en">IT Support Automation Script</div>
-          <div class="project-title" data-lang="tr">IT Destek Otomasyon Scripti</div>
-          <p class="project-desc" data-lang="en">Automated routine troubleshooting tasks in PowerShell and Python: network checks, disk usage monitoring, service status verification. Reduced manual diagnostic effort during issue resolution.</p>
-          <p class="project-desc" data-lang="tr">PowerShell ve Python ile ağ kontrolleri, disk kullanım izleme ve servis durum doğrulama gibi rutin sorun giderme görevlerini otomatikleştirdi.</p>
+          <div class="project-title" data-lang="en">Linux Kernel Recovery — Ubuntu Server</div>
+          <div class="project-title" data-lang="tr">Linux Kernel Kurtarma — Ubuntu Server</div>
+          <p class="project-desc" data-lang="en">Recovered a failed Ubuntu system after GUI crash: booted backup kernel via GRUB, rebuilt kernel modules with Makefile/build tools, restored full system with zero data loss. Deep knowledge of the Linux boot process and kernel lifecycle.</p>
+          <p class="project-desc" data-lang="tr">GUI çökmesinin ardından Ubuntu sistemini kurtardı: GRUB ile yedek kernel boot, Makefile ile kernel modülü rebuild — sıfır veri kaybı.</p>
         </div>
 
       </div>
@@ -936,10 +921,10 @@
       <div class="two-col">
         <div>
           <p class="about-text" data-lang="en">
-            Computer Engineering graduate from Pamukkale University with a practical, hands-on approach to IT. I enjoy building lab environments to sharpen skills I can't always practice in production. Focused on reducing repeat incidents, keeping users productive, and moving toward a DevOps career path.
+            Computer Engineering graduate (Pamukkale University) with a practical, infrastructure-first approach to ML systems. My IT background — 3 years managing servers and networks at a public institution — gives me an unusual perspective: I understand what breaks in production before it breaks, because I've seen it break.
           </p>
           <p class="about-text" data-lang="tr">
-            Pamukkale Üniversitesi Bilgisayar Mühendisliği mezunu. Uygulamalı ve sahaya yönelik bir IT anlayışına sahibim. Home lab ortamları kurarak üretim ortamında pratiğini yapamadığım konuları geliştirmeyi seviyorum. Tekrar eden olayları azaltmak, kullanıcıları verimli tutmak ve DevOps kariyer yolunda ilerlemek için odaklanmış durumdayım.
+            Pamukkale Üniversitesi Bilgisayar Mühendisliği mezunu. ML sistemlerine pratik, altyapı-önce yaklaşımıyla bakıyorum. 3 yıllık kamu kurumunda sunucu ve ağ yönetimi deneyimim, production'da neyin bozulacağını önceden görmemi sağlıyor.
           </p>
 
           <p class="about-text" data-lang="en"><strong>Education:</strong> B.Sc. Computer Engineering, Pamukkale University</p>
@@ -965,40 +950,24 @@
               <div class="cert-icon">🎯</div>
               <div>
                 <div class="cert-name">CompTIA A+ Core 2 (220-1202)</div>
-                <div class="cert-status" data-lang="en">In Progress — 70% complete</div>
-                <div class="cert-status" data-lang="tr">Devam Ediyor — %70 tamamlandı</div>
-              </div>
-            </div>
-            <div class="cert-item">
-              <div class="cert-icon">🤖</div>
-              <div>
-                <div class="cert-name">MLOps Fundamentals</div>
-                <div class="cert-status" data-lang="en">Ongoing (YouTube + hands-on)</div>
-                <div class="cert-status" data-lang="tr">Devam Ediyor (YouTube + uygulamalı)</div>
+                <div class="cert-status" data-lang="en">In Progress</div>
+                <div class="cert-status" data-lang="tr">İlerliyor</div>
               </div>
             </div>
             <div class="cert-item">
               <div class="cert-icon">🛡️</div>
               <div>
                 <div class="cert-name">IBM CyberStart 2.0</div>
-                <div class="cert-status" data-lang="en">Kodluyoruz Event — 2026</div>
-                <div class="cert-status" data-lang="tr">Kodluyoruz Etkinliği — 2026</div>
+                <div class="cert-status" data-lang="en">Kodluyoruz — 2026</div>
+                <div class="cert-status" data-lang="tr">Kodluyoruz — 2026</div>
               </div>
             </div>
             <div class="cert-item">
               <div class="cert-icon">🌐</div>
               <div>
                 <div class="cert-name">IBM AI4Future</div>
-                <div class="cert-status" data-lang="en">Kodluyoruz Event — 2026</div>
-                <div class="cert-status" data-lang="tr">Kodluyoruz Etkinliği — 2026</div>
-              </div>
-            </div>
-            <div class="cert-item">
-              <div class="cert-icon">📚</div>
-              <div>
-                <div class="cert-name">Bilgisayar Kavramları Community</div>
-                <div class="cert-status" data-lang="en">Active member — continuous learning</div>
-                <div class="cert-status" data-lang="tr">Aktif üye — sürekli öğrenme</div>
+                <div class="cert-status" data-lang="en">Kodluyoruz — 2026</div>
+                <div class="cert-status" data-lang="tr">Kodluyoruz — 2026</div>
               </div>
             </div>
           </div>
@@ -1012,8 +981,7 @@
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; gap:1rem;">
     <div class="footer-left">
-      <span data-lang="en" class="inline-lang">© 2026 Yunus Emre Erken</span>
-      <span data-lang="tr" class="inline-lang">© 2026 Yunus Emre Erken</span>
+      <span>© 2026 Yunus Emre Erken</span>
     </div>
     <div class="footer-links">
       <a href="https://github.com/yunusemreerken" target="_blank">
@@ -1029,7 +997,6 @@
 </footer>
 
 <script>
-  // Language toggle
   let currentLang = 'en';
 
   function toggleLang() {
@@ -1038,12 +1005,9 @@
     document.getElementById('langBtn').textContent = currentLang === 'en' ? 'TR' : 'EN';
   }
 
-  // Scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   }, { threshold: 0.1 });
 
